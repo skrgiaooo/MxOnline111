@@ -1,5 +1,5 @@
 import xadmin
-from apps.courses.models import Course
+from apps.courses.models import Course,Lesson,Video,CourseResource
 
 class CourseAdmin(object):
     #显示字段
@@ -9,5 +9,15 @@ class CourseAdmin(object):
     #筛选
     list_filter = ['id','name','desc','teacher_tell']
     pass
+class LessonAdmin(object):
+    pass
+class VideoAdmin(object):
+    pass
+class CourseResourceAdmin(object):
+    pass
 
 xadmin.site.register(Course,CourseAdmin)
+xadmin.site.register(Lesson,LessonAdmin)
+xadmin.site.register(Video,VideoAdmin)
+xadmin.site.register(CourseResource,CourseResourceAdmin)
+
